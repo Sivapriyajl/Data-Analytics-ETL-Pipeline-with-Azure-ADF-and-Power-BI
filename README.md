@@ -37,6 +37,11 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
                                     | Visualization   |
                                     +-----------------+
 
+1. **Data Ingestion:** Raw data is ingested into Azure Data Lake Storage via HTTP API.
+2. **Data Transformation:** Data is processed in Azure Databricks and saved back to Data Lake.
+3. **Data Analysis:** Processed data is analyzed using serverless SQL in Azure Synapse Analytics.
+4. **Visualization:** Insights are visualized in Power BI.
+   
 
 
 
