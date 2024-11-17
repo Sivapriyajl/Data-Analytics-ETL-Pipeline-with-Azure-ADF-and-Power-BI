@@ -8,6 +8,36 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
 ## **Project Architecture**
 ![Project Architecture Diagram](Azure_screenshots/Architecture.png)
 
+        +-----------+                  +-----------+                +---------------+
+        |           |                  |           |                |               |
+        | HTTP Data |    +--------->   |  Azure    |    +---------> | Azure         |
+        | Ingestion |                  | Data Lake |                | Databricks    |
+        | (API)     |                  | Storage   |                | (Data         |
+        |           |                  |           |                | Transformation)|
+        +-----------+                  +-----------+                +---------------+
+                                                                           |
+                                                                           |
+                                    +-----------------+                    |
+                                    |                 |                    |
+                                    | Data Lake       | <-----------------+
+                                    | Processed Data  |
+                                    | Storage         |
+                                    +-----------------+
+                                            |
+                                            v
+                                    +-----------------+
+                                    | Azure Synapse   |
+                                    | Analytics (SQL) |
+                                    | Data Analysis   |
+                                    +-----------------+
+                                            |
+                                            v
+                                    +-----------------+
+                                    | Power BI        |
+                                    | Visualization   |
+                                    +-----------------+
+
+
 
 
 
