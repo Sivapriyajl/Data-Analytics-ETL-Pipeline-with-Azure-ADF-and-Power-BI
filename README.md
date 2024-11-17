@@ -38,11 +38,11 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
                                     +-----------------+
 
 ### **Tools and Technologies Used**
-- Azure Data Lake: For scalable storage of raw and processed data
-- Azure Databricks: For data transformation.
-- Azure Synapse Analytics (Serverless SQL): For SQL-based data analysis.
-- Azure Data Factory: For orchestrating data pipelines.
-- Power BI: For visualization and insights.
+- **Azure Data Lake**: For scalable storage of raw and processed data
+- **Azure Databricks**: For data transformation.
+- **Azure Synapse Analytics (Serverless SQL)**: For SQL-based data analysis.
+- **Azure Data Factory**: For orchestrating data pipelines.
+- **Power BI**: For visualization and insights.
   
 ### **Project Setup and Workflow**
 1. **Data Ingestion:** Raw data is ingested into Azure Data Lake Storage via HTTP API.
