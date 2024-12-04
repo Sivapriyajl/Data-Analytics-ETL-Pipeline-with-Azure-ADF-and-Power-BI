@@ -92,16 +92,16 @@ Performed Exploratory Data Analysis in Azure Databricks to analyze sales pattern
 
 ![Average Weekly Sales BY Holidays:][def2]
 
-[def2]: db_forecast1.png
+[def2]: Azure_screenshots/db_forecast1.png
 From the bar chart, it is clear that weekly sales peak during the Christmas holidays, averaging approximately 1.75 million. Among the four holiday weeks, Labor Day records the lowest weekly sales.
 
 ![Store Distribution Analysis][def3]
 
-[def3]: newplot.png
+[def3]: Azure_screenshots/newplot.png
 Store number 20, 4 and 14 has the highest number of sales. this could be dependened on temperature, geographical location,unemployment etc.
 
 ![Temperature vs Weekly Sales][def4]
 
-[def4]: newplot(1).png
+[def4]: Azure_screenshots/newplot(1).png
 This scatter plot visualizes the relationship between temperature and weekly sales, with the holiday weeks highlighted using a color gradient (Holiday_Flag). The data shows that weekly sales are concentrated across varying temperature ranges, with no strong linear correlation between the two variables. However, holiday weeks (indicated in yellow) show scattered spikes in sales, suggesting that holidays significantly influence weekly sales, independent of temperature variations
 
