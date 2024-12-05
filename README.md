@@ -50,8 +50,8 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
   
 ## **Project Setup and Workflow**
 1. **Data Ingestion:** Raw data is ingested into Azure Data Lake Storage via HTTP API.
-2. **Data Engineering:** Data is processed in Azure Databricks and saved back to Data Lake.
-3. **Forcasting Model:** .
+2. **Data Transformation and Analysis:** Data is processed in Azure Databricks and saved back to Data Lake.
+3. **Forcasting Model:** 
 4. **Visualization:** Insights are visualized in Power BI.
    
 
@@ -87,21 +87,47 @@ The data was accessed via the Azure Data Factory HTTP connector and ingested int
 [def]: Azure_screenshots/Screenshot_1.png
 
 ### 2.Data Transformation and Analysis
+After ingesting the data into Azure Data Lake, the next step is accessing the data in Databricks for further processing.
+
+**Steps to Mount Azure Data Lake to Databricks:**
+- App Registration in Azure AD:
+
+Registered an application in Azure Active Directory to enable secure access to the Azure Data Lake Storage.
+- Assigning Role Permissions:
+
+Assigned the Storage Blob Data Contributor role to the registered application for the Data Lake Storage account to ensure appropriate access permissions.
+- Generating Authentication Credentials:
+
+Generated the client ID, client secret, and tenant ID for the registered application to be used in Databricks.
+- Mounting the Data Lake to Databricks:
+
+Utilized the Databricks dbutils.fs.mount() function to mount the Azure Data Lake Storage.
+
 **EDA**
 Performed Exploratory Data Analysis in Azure Databricks to analyze sales patterns, seasonality, and trends.
 
-![Average Weekly Sales BY Holidays:][def2]
+![Average Weekly Sales BY Holidays:](Azure_screenshots/db_forecast1.png)
 
-[def2]: Azure_screenshots/db_forecast1.png
+
 From the bar chart, it is clear that weekly sales peak during the Christmas holidays, averaging approximately 1.75 million. Among the four holiday weeks, Labor Day records the lowest weekly sales.
 
 ![Store Distribution Analysis][def3]
 
 [def3]: Azure_screenshots/newplot.png
-Store number 20, 4 and 14 has the highest number of sales. this could be dependened on temperature, geographical location,unemployment etc.
+Store number 20, 4 and 14 has the highest number of sales. This could be dependened on temperature, geographical location,unemployment etc.
 
-![Temperature vs Weekly Sales][def4]
+![Temperature vs Weekly Sales][def2]
 
-[def4]: Azure_screenshots/newplot(1).png
+
 This scatter plot visualizes the relationship between temperature and weekly sales, with the holiday weeks highlighted using a color gradient (Holiday_Flag). The data shows that weekly sales are concentrated across varying temperature ranges, with no strong linear correlation between the two variables. However, holiday weeks (indicated in yellow) show scattered spikes in sales, suggesting that holidays significantly influence weekly sales, independent of temperature variations
+[def2]: Azure_screenshots/newplot(1).png
 
+### 3.Forecasting Model
+Built a time-series forecasting model using Python libraries in Databricks notebooks. Predicted weekly sales for the next 104 weeks.
+![Weekly Sales Forecast](Azure_screenshots/db_forcast2.png)
+ 
+ ![Weekly Sales Forecast](Azure_screenshots/db_forcast3.png)
+
+ **Observed Data (Black Dots):**Represents the actual sales over time. Clear seasonal spikes are seen, especially around specific weeks.
+ **Forecasted Line (Blue Line):**Represents the predicted sales trends. Shows a smoother decline compared to observed data, indicating the model’s ability to generalize trends.
+ Wider intervals after 2013 suggest higher uncertainty due to the lack of data for that period. The forecast predicts a gradual decline in sales over time from 2013, with notable seasonal spikes during holidays. 
