@@ -78,7 +78,7 @@ The data was accessed via the Azure Data Factory HTTP connector and ingested int
 2. Create a Source Data Set
 3. Create a Linked Service To Azure Data Lake storage (GEN2)
 4. Create a Sink Data set
-5. Create a Pipeline
+5. Create a Pipeline for data ingestion
 - Execute Copy activity when the file becomes available
 6. Create a trigger 
 
@@ -143,13 +143,21 @@ Built a time-series forecasting model using Python libraries. Generated a foreca
 **Model Execution Pipeline**
 **Purpose:** Automate the execution of the Databricks notebook for forecasting weekly sales.
 **Cluster Type:** Job Cluster in Databricks
+**Output Storage:** The forecated sales data for the next years was saved back to Azure Data Lake.
+
+![Forcasted model pipeline](Azure_screenshots/Screenshot_3.png)
 
 **Steps:**
+1. Create a Linked Service To Databricks
+2.  Create a forecating model execution Pipeline
+- Execute Databricks Notebook 
+3. Run a manual trigger
+4.  Create a parent pipeline
+- Execute Pipeline Activities: Used to link and execute the two individual pipelines.
 
-1. Create a Linked Service To Http Connector
-2. Create a Source Data Set
-3. Create a Linked Service To Azure Data Lake storage (GEN2)
-4. Create a Sink Data set
-5. Create a Pipeline
-- Execute Copy activity when the file becomes available
-6. Create a trigger 
+![Pipeline Execution](Azure_screenshots/Screenshot_4.png)
+
+### 4.Visualization
+
+**PowerBI Dashboard**
+- Imported both historical and forecasted data into Power BI for insights.
