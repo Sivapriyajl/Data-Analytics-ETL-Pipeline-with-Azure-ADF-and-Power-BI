@@ -103,7 +103,7 @@ Utilized the Databricks dbutils.fs.mount() function to mount the Azure Data Lake
 Performed Exploratory Data Analysis in Azure Databricks to analyze sales patterns, seasonality, and trends.
 
 ![Average Weekly Sales BY Holidays:](Azure_screenshots/db_forcast1.png)
-![Weekly Sales Forecast](Azure_screenshots/db_forcast2.png)
+
 
 From the bar chart, it is clear that weekly sales peak during the Christmas holidays, averaging approximately 1.75 million. Among the four holiday weeks, Labor Day records the lowest weekly sales.
 
@@ -167,3 +167,9 @@ Built a time-series forecasting model using Python libraries. Generated a foreca
 ![Walmart Sales Prediction](Azure_screenshots/Screenshot_6.png)
 
 ## Conclusions and Recommendation
+
+Purpose of the project was to build a seamless working pipeline and to forecast the weekly sales of watlmart with the available historical data. it also aims to understand whether sales are relatively higher during holidays like Christmas and Thanksgiving than normal days so that stores can work on creating promotional offers that
+increase sales and generate higher revenue. By exploratory data analysis , the performance of stores and how temperature and holidays affect sales trend is also analysed. 
+
+One of the limitation was the historical sales data available was only between 2010 and 2012.Because of this limited past history data, models cannot be
+trained as efficiently to give accurate results and predictions. It is tough to predict how the consumer buying behavior changes over the years.
