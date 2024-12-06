@@ -161,3 +161,6 @@ Built a time-series forecasting model using Python libraries. Generated a foreca
 
 **PowerBI Dashboard**
 - Imported both historical and forecasted data into Power BI for insights.
+
+![Walmart Sales Overview](Azure_screenshots/Screenshot_5.png)
+![Walmart Sales Prediction](Azure_screenshots/Screenshot_6.png)
