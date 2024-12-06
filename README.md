@@ -154,6 +154,7 @@ Built a time-series forecasting model using Python libraries. Generated a foreca
 3. Run a manual trigger
 4.  Create a parent pipeline
 - Execute Pipeline Activities: Used to link and execute the two individual pipelines.
+5. Create Storage Event trigger
 
 ![Pipeline Execution](Azure_screenshots/Screenshot_4.png)
 
