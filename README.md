@@ -107,7 +107,7 @@ Utilized the Databricks dbutils.fs.mount() function to mount the Azure Data Lake
 Performed Exploratory Data Analysis in Azure Databricks to analyze sales patterns, seasonality, and trends.
 
 ![Average Weekly Sales BY Holidays:](Azure_screenshots/db_forecast1.png)
-
+![Weekly Sales Forecast](Azure_screenshots/db_forcast3.png)
 
 From the bar chart, it is clear that weekly sales peak during the Christmas holidays, averaging approximately 1.75 million. Among the four holiday weeks, Labor Day records the lowest weekly sales.
 
@@ -123,11 +123,33 @@ This scatter plot visualizes the relationship between temperature and weekly sal
 [def2]: Azure_screenshots/newplot(1).png
 
 ### 3.Forecasting Model
-Built a time-series forecasting model using Python libraries in Databricks notebooks. Predicted weekly sales for the next 104 weeks.
+Built a time-series forecasting model using Python libraries. Generated a forecast for the next two years at a weekly frequency to help businesses make data-driven decisions for inventory planning and resource allocation..
 ![Weekly Sales Forecast](Azure_screenshots/db_forcast2.png)
  
  ![Weekly Sales Forecast](Azure_screenshots/db_forcast3.png)
 
- **Observed Data (Black Dots):**Represents the actual sales over time. Clear seasonal spikes are seen, especially around specific weeks.
- **Forecasted Line (Blue Line):**Represents the predicted sales trends. Shows a smoother decline compared to observed data, indicating the model’s ability to generalize trends.
+ **Observed Data (Black Dots):** Represents the actual sales over time. Clear seasonal spikes are seen, especially around specific weeks.
+ **Forecasted Line (Blue Line):** Represents the predicted sales trends. Shows a smoother decline compared to observed data, indicating the model’s ability to generalize trends.
  Wider intervals after 2013 suggest higher uncertainty due to the lack of data for that period. The forecast predicts a gradual decline in sales over time from 2013, with notable seasonal spikes during holidays. 
+
+### Limitations
+- Accuracy of the forecast cannot be tested as future actual sales data is unavailable.
+- The model assumes that the relationships between external factors and sales remain consistent.
+
+### Future Work
+- Improve the model by incorporating additional regressors like advertising spend and competitor pricing.
+- Validate the model through backtesting or cross-validation using historical data.
+
+**Model Execution Pipeline**
+**Purpose:** Automate the execution of the Databricks notebook for forecasting weekly sales.
+**Cluster Type:** Job Cluster in Databricks
+
+**Steps:**
+
+1. Create a Linked Service To Http Connector
+2. Create a Source Data Set
+3. Create a Linked Service To Azure Data Lake storage (GEN2)
+4. Create a Sink Data set
+5. Create a Pipeline
+- Execute Copy activity when the file becomes available
+6. Create a trigger 
