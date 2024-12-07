@@ -36,11 +36,11 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
 ### **Tools and Technologies Used**
 **Azure Services:**
 - **Azure Data Lake**: For scalable storage of raw and processed data
-- **Azure Databricks**: For data transformation.
+- **Azure Databricks**: For data analysis and forecasting.
 - **Azure Data Factory**: For orchestrating data pipelines.
 
 **Programming and Tools:**
-- **Python**: Used in Databricks notebooks for data transformation (PySpark).
+- **Python**(libraries used- Pandas, Numpy, Matplotlib, seaborn): Used in Databricks notebooks (PySpark).
 - **Power BI Desktop**: For visualization and insights.
 
   
