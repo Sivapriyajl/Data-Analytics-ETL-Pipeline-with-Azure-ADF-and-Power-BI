@@ -33,6 +33,8 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
                                     | Visualization   |
                                     +-----------------+
 
+![Diagram](Azure_screenshots/Blank%20diagram.png)
+
 ### **Tools and Technologies Used**
 **Azure Services:**
 - **Azure Data Lake**: For scalable storage of raw and processed data
@@ -197,3 +199,6 @@ trained as efficiently to give accurate results and predictions. It is tough to 
   Resolution: Efforts were made to optimize resource usage, but some advanced evaluations had to be scaled down or postponed.
 - After completing the project and uploading data to Power BI, Azure services were deleted to manage costs. However, this caused issues with data transformation and visualization when additional modifications were needed.
   Resolution: Preemptive steps were taken to finalize visualizations before service deletion, but further updates or iterations were not possible without reconfiguring the pipeline.
+
+
+[def2]: Azure_screenshots/Blank%20diagram.png
