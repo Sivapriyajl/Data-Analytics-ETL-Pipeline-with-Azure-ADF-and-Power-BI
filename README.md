@@ -33,6 +33,8 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
                                     | Visualization   |
                                     +-----------------+
 
+![Weekly Sales Forecast](Azure_screenshots/Blank diagram.png)
+
 ### **Tools and Technologies Used**
 **Azure Services:**
 - **Azure Data Lake**: For scalable storage of raw and processed data
