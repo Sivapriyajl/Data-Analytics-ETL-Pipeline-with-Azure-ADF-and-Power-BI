@@ -33,7 +33,6 @@ This project demonstrates an end-to-end data analytics solution using Azure serv
                                     | Visualization   |
                                     +-----------------+
 
-![Diagram](Azure_screenshots/Blank%20diagram.png)
 
 ### **Tools and Technologies Used**
 **Azure Services:**
