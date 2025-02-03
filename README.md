@@ -172,9 +172,6 @@ Built a time-series forecasting model using Python libraries. Generated a foreca
 
 Purpose of the project was to build a seamless working pipeline and to forecast the weekly sales of watlmart with the available historical data. it also aims to understand whether sales are relatively higher during holidays like Christmas and Thanksgiving than normal days so that stores can work on creating promotional offers that
 increase sales and generate higher revenue. By exploratory data analysis , the performance of stores and how temperature and holidays affect sales trend is also analysed. 
-**Limitations**
-One of the limitation was the historical sales data available was only between 2010 and 2012.Because of this limited past history data, models cannot be
-trained as efficiently to give accurate results and predictions. It is tough to predict how the consumer buying behavior changes over the years.
 
 **Recommendation**
 - Introduce targeted promotions and discounts during non-holiday periods to maintain sales momentum.
@@ -191,12 +188,10 @@ trained as efficiently to give accurate results and predictions. It is tough to 
   Resolution: To mitigate costs, tasks were optimized by reducing cluster uptime.
 - The Prophet library, essential for time-series forecasting, is not natively compatible with PySpark, limiting the ability to fully utilize PySpark’s distributed computing power.
   Resolution: Pandas, NumPy, Matplotlib, and Seaborn were used for forecasting and visualization.
-- Running job clusters to execute the forecasting model in Azure Databricks caused a significant increase in costs during pipeline execution.
-  Resolution: Efforts were made to reduce cluster runtime.
 - Identifying the causes behind the projected decline in sales required an in-depth correlation analysis with external factors such as fuel prices and unemployment rates.
   Resolution:Analysis in PowerBI and provide actionable recommendations.
 - The cost of using Azure services increased significantly during exploratory data analysis and model building stages, limiting the ability to conduct further evaluation and accuracy testing.
-  Resolution: Efforts were made to optimize resource usage, but some advanced evaluations had to be scaled down or postponed.
+  Resolution: Efforts were made to optimize resource usage, but some advanced evaluations such as model evaluation had to do in local environment.
 - After completing the project and uploading data to Power BI, Azure services were deleted to manage costs. However, this caused issues with data transformation and visualization when additional modifications were needed.
   Resolution: Preemptive steps were taken to finalize visualizations before service deletion, but further updates or iterations were not possible without reconfiguring the pipeline.
 
